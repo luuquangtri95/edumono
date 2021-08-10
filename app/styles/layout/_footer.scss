@@ -1,0 +1,89 @@
+.footer {
+  background-color: $footer-color;
+  &__inner {
+    padding: 7.5rem 0;
+    --spacing: 3rem;
+    --columns: 4;
+    margin-left: calc(-1 * (var(--spacing)));
+    @include flexboxUpdate(
+      (
+        align-items: stretch,
+      )
+    );
+    &-item {
+      width: calc(calc(100% / var(--columns)) - var(--spacing));
+      margin-left: var(--spacing);
+    }
+    &-logo {
+      margin-bottom: 2.5rem;
+    }
+    &-desc {
+      color: $color-text;
+      line-height: 1.4;
+      @include textClamp(3);
+      // padding-bottom: 2.5rem;
+      // margin-bottom: 2.5rem;
+      // border-bottom: 1px solid $color-text;
+    }
+    &-title {
+      margin-bottom: 5rem;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+  &__social {
+    &-list {
+      padding-top: 2.5rem;
+      margin-top: 2.5rem;
+      border-top: 1px solid $color-text;
+      @include flexboxUpdate(
+        (
+          align-items: center,
+        )
+      );
+    }
+    &-item {
+      &:not(:first-child) {
+        margin-left: 1.5rem;
+      }
+    }
+    &-link {
+      i {
+        color: $color-text;
+        font-size: 2rem;
+        &:hover {
+          color: #0089fd;
+        }
+      }
+    }
+  }
+  &__list {
+    &-item {
+      margin-bottom: 3.5rem;
+    }
+    &-link {
+      color: $color-text;
+      span {
+        color: #6b6b6b;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  .form {
+    &-group {
+      position: relative;
+    }
+    &-control {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 1.5rem 2rem;
+    }
+  }
+  &-btn {
+    position: absolute;
+    right: 0;
+  }
+}

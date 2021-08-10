@@ -1,0 +1,14 @@
+mixin blockHeading(data)
+  .block__heading
+    .block__heading-title= data.title
+    .block__heading-desc= data.desc
+    if data.btnText
+      .block__heading-btn
+        a.btn.btn--primary.btn--bold= data.btnText
+mixin blockAroundItem(data)
+  .around__inner-item
+    img(src= data.src)
+    .around__body
+      h3.around__body-title.mb-1= data.title 
+      span.around__body-branch= data.branch
+      span= data.reading

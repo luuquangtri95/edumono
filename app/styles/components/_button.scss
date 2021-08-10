@@ -1,0 +1,19 @@
+.btn {
+  padding: 1.5rem 2.6rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: $primary-color;
+  border-radius: 50rem;
+  display: inline-block;
+  &--bold {
+    font-weight: bold;
+  }
+  &--primary {
+    background-color: $primary-color;
+    color: #fff;
+  }
+  &--noradius{
+    border-radius: 0;
+  }
+}

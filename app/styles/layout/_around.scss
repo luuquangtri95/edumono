@@ -1,0 +1,72 @@
+.around {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('../images/img-around-bg1.png') no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    z-index: -1;
+  }
+  &__image {
+    position: absolute;
+    right: 0;
+    top: -10%;
+    z-index: -1;
+  }
+  &__title {
+    margin-top: 13.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  &__inner {
+    --spacing: 3rem;
+    --columns: 4;
+    margin-left: calc(-1 * var(--spacing));
+    @include flexboxUpdate(
+      (
+        flex-wrap: wrap,
+        align-items: center,
+      )
+    );
+    margin-bottom: 12rem;
+    &-item {
+      --height: 31rem;
+      width: calc(calc(100% / var(--columns)) - var(--spacing));
+      margin-left: var(--spacing);
+      margin-bottom: var(--spacing);
+      transition: all 0.2s linear;
+      height: var(--height);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      img {
+        width: 100%;
+        height: 160px;
+      }
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+    }
+  }
+  &__body {
+    padding: 2rem;
+    background-color: #fff;
+    height: calc(100% - 16rem);
+    @include flexboxUpdate(
+      (
+        flex-direction: column,
+        justify-content: space-between,
+      )
+    );
+    &-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: 1.2;
+      @include textClamp(2);
+    }
+    &-branch {
+      display: block;
+      margin-bottom: 3.5rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  // background: url('../images/img-bg.png') no-repeat center/cover;
+  &__inner {
+    padding-top: 2.6rem;
+    @include flexboxUpdate(
+      (
+        align-items: center,
+        justify-content: space-between,
+      )
+    );
+  }
+  &__list {
+    @include flexboxUpdate(
+      (
+        align-items: center,
+      )
+    );
+    &-item {
+      &:not(:first-child) {
+        margin-left: 4.5rem;
+      }
+    }
+    &-link {
+      color: $color-text;
+      font-size: 1 0.6rem;
+      font-weight: bold;
+    }
+  }
+  &__btn {
+  }
+  @include maxWidth(767) {
+    &__list {
+      display: none;
+    }
+  }
+}

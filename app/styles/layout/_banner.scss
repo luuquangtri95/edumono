@@ -1,0 +1,20 @@
+.slider {
+  margin-top: -10.5rem;
+  padding: 31rem 0;
+  background: url('../images/img-bg.png') no-repeat center / cover;
+  &__inner {
+    --width: 50%;
+    width: var(--width);
+    @include flexboxUpdate(
+      (
+        justify-content: flex-start,
+      )
+    );
+    margin-bottom: 18rem;
+  }
+  @include maxWidth(767) {
+    &__inner {
+      --width: 100%;
+    }
+  }
+}

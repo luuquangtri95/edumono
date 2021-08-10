@@ -1,0 +1,67 @@
+.department {
+  &__inner {
+    &-heading {
+      width: 58.5rem;
+      margin: 0 auto;
+    }
+    &-cousers {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+    }
+    &-row {
+      --spacing: 3rem;
+      --columns: 3;
+      margin-left: calc(-1 * var(--spacing));
+      @include flexboxUpdate(
+        (
+          flex-wrap: wrap,
+          align-items: stretch,
+        )
+      );
+    }
+    &-item {
+      width: calc(calc(100% / var(--columns)) - var(--spacing));
+      margin-left: var(--spacing);
+      margin-bottom: var(--spacing);
+      &:last-child {
+        img {
+          width: 277px;
+          height: 277px;
+        }
+      }
+      @include flexboxUpdate(
+        (
+          flex-direction: column,
+          align-items: center,
+          justify-content: center,
+        )
+      );
+      &--organce {
+        background-color: #f9703a;
+      }
+      &--green {
+        background-color: #80be41;
+      }
+      &--yellow {
+        background-color: #ffb258;
+      }
+    }
+    &-info {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  @include maxWidth(479) {
+    &__inner {
+      &-heading {
+        width: 100%;
+      }
+      &-row {
+        --spacing: 1rem;
+        --columns: 1;
+      }
+    }
+  }
+}

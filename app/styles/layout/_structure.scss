@@ -1,0 +1,35 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: $font-family;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+// blockHeading
+.block {
+  &__heading {
+    &-title {
+      font-size: 4rem;
+      font-weight: bold;
+      color: $primary-color;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+    }
+    &-desc {
+      color: $color-text;
+      font-weight: 500;
+      line-height: 1.6;
+      @include textClamp(2);
+    }
+    &-btn {
+      margin-top: 5rem;
+    }
+  }
+}

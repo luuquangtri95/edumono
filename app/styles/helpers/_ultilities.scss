@@ -1,0 +1,242 @@
+$alignItem: (
+  'center': center,
+  'start': flex-start,
+  'end': flex-end,
+);
+@each $name, $value in $alignItem {
+  .align-item-#{$name} {
+    align-items: $value;
+  }
+}
+$justify: (
+  'center': center,
+  'start': flex-start,
+  'end': flex-end,
+  'betwee': space-between,
+);
+@each $name, $value in $justify {
+  .justify-content-#{$name} {
+    justify-content: $value;
+  }
+}
+
+$margin: (
+  'm-auto': 0 auto,
+  'm-1': 1rem,
+  'm-2': 2rem,
+  'm-3': 3rem,
+  'm-4': 4rem,
+  'm-5': 5rem,
+  'm-6': 6rem,
+  'm-7': 7rem,
+  'm-8': 8rem,
+  'm-9': 9rem,
+  'm-10': 10rem,
+);
+@each $name, $value in $margin {
+  .#{$name} {
+    margin: $value;
+  }
+}
+// margin
+$margin-left: (
+  'ml-auto': auto,
+  'ml-1': 1rem,
+  'ml-2': 2rem,
+  'ml-3': 3rem,
+  'ml-4': 4rem,
+  'ml-5': 5rem,
+  'ml-6': 6rem,
+  'ml-7': 7rem,
+  'ml-8': 8rem,
+  'ml-9': 9rem,
+  'ml-10': 10rem,
+);
+@each $name, $value in $margin-left {
+  .#{$name} {
+    margin-left: $value;
+  }
+}
+
+$margin-right: (
+  'mr-auto': auto,
+  'mr-1': 1rem,
+  'mr-2': 2rem,
+  'mr-3': 3rem,
+  'mr-4': 4rem,
+  'mr-5': 5rem,
+  'mr-6': 6rem,
+  'mr-7': 7rem,
+  'mr-8': 8rem,
+  'mr-9': 9rem,
+  'mr-10': 10rem,
+);
+@each $name, $value in $margin-right {
+  .#{$name} {
+    margin-right: $value;
+  }
+}
+
+$margin-top: (
+  'mt-auto': auto,
+  'mt-1': 1rem,
+  'mt-2': 2rem,
+  'mt-3': 3rem,
+  'mt-4': 4rem,
+  'mt-5': 5rem,
+  'mt-6': 6rem,
+  'mt-7': 7rem,
+  'mt-8': 8rem,
+  'mt-9': 9rem,
+  'mt-10': 10rem,
+);
+@each $name, $value in $margin-top {
+  .#{$name} {
+    margin-top: $value;
+  }
+}
+
+$margin-bottom: (
+  'mb-auto': auto,
+  'mb-1': 1rem,
+  'mb-2': 2rem,
+  'mb-3': 3rem,
+  'mb-4': 4rem,
+  'mb-5': 5rem,
+  'mb-6': 6rem,
+  'mb-7': 7rem,
+  'mb-8': 8rem,
+  'mb-9': 9rem,
+  'mb-10': 10rem,
+);
+@each $name, $value in $margin-bottom {
+  .#{$name} {
+    margin-bottom: $value;
+  }
+}
+// padding
+$padding-top: (
+  'pt-1': 1rem,
+  'pt-2': 2rem,
+  'pt-3': 3rem,
+  'pt-4': 4rem,
+  'pt-5': 5rem,
+  'pt-6': 6rem,
+  'pt-7': 7rem,
+  'pt-8': 8rem,
+  'pt-9': 9rem,
+  'pt-10': 10rem,
+);
+@each $name, $value in $padding-top {
+  .#{$name} {
+    padding-top: $value;
+  }
+}
+$padding-left: (
+  'pl-1': 1rem,
+  'pl-2': 2rem,
+  'pl-3': 3rem,
+  'pl-4': 4rem,
+  'pl-5': 5rem,
+  'pl-6': 6rem,
+  'pl-7': 7rem,
+  'pl-8': 8rem,
+  'pl-9': 9rem,
+  'pl-10': 10rem,
+);
+@each $name, $value in $padding-left {
+  .#{$name} {
+    padding-left: $value;
+  }
+}
+$padding-right: (
+  'pr-1': 1rem,
+  'pr-2': 2rem,
+  'pr-3': 3rem,
+  'pr-4': 4rem,
+  'pr-5': 5rem,
+  'pr-6': 6rem,
+  'pr-7': 7rem,
+  'pr-8': 8rem,
+  'pr-9': 9rem,
+  'pr-10': 10rem,
+);
+@each $name, $value in $padding-right {
+  .#{$name} {
+    padding-right: $value;
+  }
+}
+$padding-bottom: (
+  'pb-1': 1rem,
+  'pb-2': 2rem,
+  'pb-3': 3rem,
+  'pb-4': 4rem,
+  'pb-5': 5rem,
+  'pb-6': 6rem,
+  'pb-7': 7rem,
+  'pb-8': 8rem,
+  'pb-9': 9rem,
+  'pb-10': 10rem,
+);
+@each $name, $value in $padding-bottom {
+  .#{$name} {
+    padding-bottom: $value;
+  }
+}
+
+// font size
+$font-size: (
+  'fz-1': 1rem,
+  'fz-2': 2rem,
+  'fz-3': 3rem,
+  'fz-4': 4rem,
+  'fz-5': 5rem,
+  'fz-6': 6rem,
+);
+@each $name, $value in $font-size {
+  .#{$name} {
+    font-size: $value;
+  }
+}
+
+// font weight
+$font-weight: (
+  'fw-bold': bold,
+  'fw-600': 600,
+  'fw-500': 500,
+  'fw-400': 400,
+  'fw-300': 300,
+);
+@each $name, $value in $font-weight {
+  .#{$name} {
+    font-weight: $value;
+  }
+}
+
+// text-align
+$text-align: (
+  'text-start': left,
+  'text-end': right,
+  'text-center': center,
+);
+@each $name, $value in $text-align {
+  .#{$name} {
+    text-align: $value;
+  }
+}
+
+//text-tranform
+$text-transform: (
+  'text-decoration-none': none,
+  'text-decoration-underline': underline,
+  'text-decoration-line-through': line-through,
+  'text-lowercase': lowercase,
+  'text-uppercase': uppercase,
+  'text-capitalize': capitalize,
+);
+@each $name, $value in $text-transform {
+  .#{$name} {
+    text-transform: $value;
+  }
+}
+
