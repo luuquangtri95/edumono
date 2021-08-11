@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var toggleMenuIcon=document.querySelector(".header-menu-toggle"),headerMenuList=document.querySelector(".header__list"),classExpand="is-expand",classActive="is-active";toggleMenuIcon.addEventListener("click",function(){toggleMenuIcon.classList.toggle(classActive),headerMenuList.classList.toggle(classExpand)}),window.addEventListener("click",function(e){console.log(e.target),headerMenuList.contains(e.target)||e.target.matches(".header-menu-toggle")||(headerMenuList.classList.remove(classExpand),toggleMenuIcon.classList.remove(classActive))});

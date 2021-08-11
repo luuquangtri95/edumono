@@ -15,3 +15,27 @@
 //     ],
 //   });
 // });
+
+// menu mobile
+const toggleMenuIcon = document.querySelector('.header-menu-toggle');
+const headerMenuList = document.querySelector('.header__list');
+const classExpand = 'is-expand';
+const classActive = 'is-active';
+
+toggleMenuIcon.addEventListener('click', function () {
+  toggleMenuIcon.classList.toggle(classActive);
+  headerMenuList.classList.toggle(classExpand);
+});
+
+// window click outsite
+window.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (
+    !headerMenuList.contains(e.target) &&
+    !e.target.matches(".header-menu-toggle")
+  ) {
+    headerMenuList.classList.remove(classExpand);
+    toggleMenuIcon.classList.remove(classActive);
+  }
+});
+
