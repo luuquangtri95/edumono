@@ -86,4 +86,15 @@
     position: absolute;
     right: 0;
   }
+  @include maxWidth(767) {
+    &__inner {
+      --columns: 1;
+      flex-direction: column;
+    }
+    &__social {
+      &-list {
+        margin-bottom: 3rem;
+      }
+    }
+  }
 }

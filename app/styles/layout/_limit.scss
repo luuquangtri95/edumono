@@ -80,13 +80,51 @@
       &--green {
         color: #43cb83;
       }
-      &:not(:first-child) {
-        margin-left: 9rem;
-      }
     }
     &-number {
       font-size: 3rem;
       font-weight: bold;
+    }
+  }
+  @include minWidth(768) {
+    &__count {
+      &-item {
+        &:not(:first-child) {
+          margin-left: 9rem;
+        }
+      }
+    }
+  }
+  @include maxWidth(767) {
+    > img {
+      top: -10%;
+      right: 25%;
+    }
+    &__inner {
+      --spacing: 2rem;
+      --columns: 1;
+      flex-direction: column;
+      &-item {
+        &::before {
+          display: none;
+        }
+      }
+      &-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      &-desc {
+        @include textClamp(4);
+        text-align: center;
+      }
+    }
+    &__count {
+      &-item {
+        &:not(:first-child) {
+          margin-left: 3rem;
+        }
+      }
     }
   }
 }
