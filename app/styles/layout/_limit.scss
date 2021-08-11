@@ -108,6 +108,10 @@
         &::before {
           display: none;
         }
+        &-icon {
+          font-size: 1.5rem;
+          padding: 1.5rem;
+        }
       }
       &-title {
         font-size: 2.5rem;

@@ -14,7 +14,16 @@
     background-color: $primary-color;
     color: #fff;
   }
-  &--noradius{
+  &--noradius {
     border-radius: 0;
+  }
+  &--nobgcolor {
+    background-color: transparent;
+    color: $primary-color;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
   }
 }

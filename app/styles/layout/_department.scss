@@ -24,6 +24,7 @@
       width: calc(calc(100% / var(--columns)) - var(--spacing));
       margin-left: var(--spacing);
       margin-bottom: var(--spacing);
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       &:last-child {
         img {
           width: 277px;

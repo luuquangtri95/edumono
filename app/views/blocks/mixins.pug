@@ -4,7 +4,7 @@ mixin blockHeading(data)
     .block__heading-desc= data.desc
     if data.btnText
       .block__heading-btn
-        a.btn.btn--primary.btn--bold= data.btnText
+        a(href= data.href).btn.btn--primary.btn--bold= data.btnText
 mixin blockAroundItem(data)
   .around__inner-item
     img(src= data.src)
